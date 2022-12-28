@@ -2,28 +2,29 @@
     box-sizing: border-box; 
     font-size: 20px;
     
+    
    
 }
 *:not(button) {
-    background-color: grey;
+  background-color: black;
   
 }
 
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .calculator{
-    margin-top: 100px;
     display: flex;
     flex-direction: column;
-    border: 5px solid black;
+    border: 5px solid white;
     min-width: 500px;
 }
 
-#operationButtons{
+.operationButtons{
    height: 115px;
    width: 115px;
 }
@@ -37,9 +38,15 @@ body{
 }
 
 
-input{
-    border: 2px solid black;
+#display{
+    display: flex;
+    flex-direction: row-reverse;
+    color: aliceblue;
+    height: 70px;
+    border: 2px solid white;
     margin: 5px;
+    font-size: 50px;
+    padding: 10px;
 }
 
 #clear{
@@ -66,5 +73,11 @@ input{
 input[type=text]{
     height: 100px;
     font-size: 40px;
+    color: aliceblue;
+}
+
+h1{
+    color: aliceblue;
+    font-size: 50px;
 }
 
