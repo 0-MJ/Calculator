@@ -67,13 +67,28 @@ let display = document.getElementById('display')
 const operationButtons = document.querySelectorAll(".operators");
 operationButtons.forEach(function(button){
     button.addEventListener('click',function(){
-         // Append the operator character to the display element//
-        display.append(button.textContent);
-        operator=button.textContent;
-        console.log(`a:${a},operator:${operator},b:${b}`);
-
-        })
-})
+     // Check if a, operator, and b have values
+     if (a  && operator  && b ) {
+      // Calculate the result
+      result = operate(a, operator, b);
+      // Update the display element with the result
+      display.textContent = result;
+      // Update the a variable with the result
+      a = result;
+      // Append the operator character to the display element
+      display.append(button.textContent);
+      // Update the operator variable
+      operator = button.textContent;
+      b = "";
+    } else {
+      // Append the operator character to the display element
+      display.append(button.textContent);
+      // Update the operator variable
+      operator = button.textContent;
+    }
+    console.log(`a:${a}, operator:${operator}, b:${b}`);
+  });
+});
 // Add event listeners to the number buttons//
 const numberButtons = document.querySelectorAll(".operands");
 numberButtons.forEach(function(button){
@@ -131,6 +146,7 @@ equalsButton.addEventListener('click',function(){
   result = operate(a,operator,b);
  display.textContent=result;
  a=result;
- 
+ b="";
+ operator="";
   console.log(result);
 });
