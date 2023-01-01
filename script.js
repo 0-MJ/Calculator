@@ -138,9 +138,6 @@ deleteButton.addEventListener('click',function(){
   }
    console.log(`a:${a},operator:${operator},b:${b}`);
   });
-
-           
-
 const equalsButton = document.getElementById('equals');
 equalsButton.addEventListener('click',function(){
   result = operate(a,operator,b);
