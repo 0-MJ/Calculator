@@ -2,7 +2,6 @@ let a="";
 let operator = "";
 let b="";
 let result=0;
-
 // Define a function to perform mathematical operations//
 const operate = function(a, operator, b){
    // Convert the arguments to integers
@@ -57,12 +56,8 @@ const operate = function(a, operator, b){
   function divide (a,b){
     return a/b
   }
-  
-
 // Get a reference to the display element//
 let display = document.getElementById('display')
-
-
 // Add event listeners to the operation buttons//
 const operationButtons = document.querySelectorAll(".operators");
 operationButtons.forEach(function(button){
