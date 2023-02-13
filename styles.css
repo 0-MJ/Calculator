@@ -89,3 +89,10 @@ h1{
     color: aliceblue;
     font-size: 50px;
 }
+
+button{
+    border-radius: 7px;
+}
+.calculator,#display{
+    border-radius: 10px;
+}
