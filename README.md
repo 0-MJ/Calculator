@@ -1,3 +1,5 @@
+
+## Part of the odin project curriculum
 # A simple Calculator Application 
 
 ## Features
